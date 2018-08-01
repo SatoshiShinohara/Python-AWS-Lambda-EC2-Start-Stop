@@ -19,8 +19,8 @@ def lambda_handler(event, context):
                     if tag['Key'] == 'NoStartStop' and tag['Value'] == 'true':
                         no_list.append(instance['InstanceId'])
 
-    print(all_list)
-    print(no_list)
+    # print(all_list)
+    # print(no_list)
 
     # 全インスタンスリストと起動・停止対象外のインスタンスとの差分を取得
     diffset = set(all_list) - set(no_list)
@@ -28,7 +28,7 @@ def lambda_handler(event, context):
     # 起動・停止対象のインスタンスID一覧を取得
     target_list = list(diffset)
 
-    print(target_list)
+    # print(target_list)
 
     # 起動・停止を実行
     if event['Action'] == 'start':
