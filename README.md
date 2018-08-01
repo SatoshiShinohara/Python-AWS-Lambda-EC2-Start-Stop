@@ -1,1 +1,1 @@
-# python-aws-lambda-ec2-start
+# python-aws-lambda-ec2-start-stop
