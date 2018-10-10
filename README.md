@@ -13,10 +13,10 @@ AWS Lambda Python 3.6
 
 #### 起動
 ``` json
-{"Action": "start", "Region": "ap-northeast-1", "Tag": "NoStartStop", "Value": "true"}
+{"Action": "start", "Region": "ap-northeast-1", "TagName": "NoStartStop", "TagValue": "true"}
 ```
 
 #### 停止
 ``` json
-{"Action": "stop", "Region": "ap-northeast-1", "Tag": "NoStartStop", "Value": "true"}
+{"Action": "stop", "Region": "ap-northeast-1", "TagName": "NoStartStop", "TagValue": "true"}
 ```

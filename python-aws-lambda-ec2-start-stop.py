@@ -16,7 +16,7 @@ def lambda_handler(event, context):
             # 起動・停止対象外のインスタンスIDをリストに追加
             if 'Tags' in instance:
                 for tag in instance['Tags']:
-                    if tag['Key'] == event['Tag'] and tag['Value'] == event['Value']:
+                    if tag['Key'] == event['TagName'] and tag['Value'] == event['TagValue']:
                         no_list.append(instance['InstanceId'])
 
     # 全インスタンスリストと起動・停止対象外のインスタンスとの差分を取得
